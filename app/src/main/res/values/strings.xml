@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Captain Sales Force</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Change Password</string>
+    <string name="no_internet_connectivity">No internet connection</string>
+    <string name="UnableToConnectServer">Unable to connect to server</string>
+    <string name="error_incorrect_password">Invalid Username or Password</string>
+    <string name="home">Home</string>
+    <string name="Authenticating">Authenticating&#8230;</string>
+    <string name="alreadyOnThatScreen">Already on that screen</string>
+    <string name="tip3">tip3</string>
+    <string name="tip4">tip4</string>
+    <string name="tip2">tip2</string>
+    <string name="tip1">tip1</string>
+    <string name="prompt_passwordTip">Enter Password</string>
+    <string name="ChangePass">Change Password</string>
+    <string name="error">Error</string>
+    <string name="logout">Logout</string>
+    <string name="share">Share</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="ErrorReport">BMA Error Report</string>
+    <string name="CheckForUpdates">Check For Updates</string>
+    <string name="UpdateDescription">Check update for your app here</string>
+    <string name="ReportProblem">Report Problem</string>
+    <string name="ProblemDescription">Report any problems or crash you face here. Clicking it automatically detects any crash and reports it to us.</string>
+    <string name="AboutUsDescription">App built by Adansa Solution Pvt Ltd.</string>
+    <string name="PrivacyPolicy">Privacy Policy</string>
+</resources>

@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/my_actionbar_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_weight="1.9"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/screenTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:singleLine="true"
+                    android:text="Lead Visit"
+                    android:textColor="@color/white" />
+                <!--style="?android:textAppearanceSmall"-->
+                <TextView
+                    android:id="@+id/right_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:layout_below="@+id/screenTitle"
+                    android:layout_centerHorizontal="true"
+                    android:text="Right Title"
+                    android:textColor="#C5C5C5"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/saveData"
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:padding="10dp"
+                android:text="Save"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="1. Visit Type"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="match_parent"/>
+
+            <Spinner
+                android:id="@+id/spin1"
+                android:layout_width="match_parent"
+                android:textColor="@color/grey"
+                android:layout_height="50dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+
+            <TextView
+                android:id="@+id/lable1"
+                android:layout_width="match_parent"
+                android:text="2. State"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="match_parent"/>
+
+            <Spinner
+                android:id="@+id/spin2"
+                android:layout_width="match_parent"
+                android:textColor="@color/grey"
+                android:layout_height="50dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/lable3"
+                android:layout_width="match_parent"
+                android:text="3. District"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="match_parent"/>
+
+            <Spinner
+                android:id="@+id/spin3"
+                android:layout_width="match_parent"
+                android:textColor="@color/grey"
+                android:layout_height="50dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="4. Site Details"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/site_dtls"
+                android:textColor="@color/grey"
+                android:gravity="start"
+                android:background="@drawable/edit_txt_roundcorner"
+                android:padding="20dp"
+                android:maxLength="64"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="5. Site Address"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/site_adrs"
+                android:textColor="@color/grey"
+                android:gravity="start"
+                android:background="@drawable/edit_txt_roundcorner"
+                android:padding="20dp"
+                android:maxLength="255"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="6. Dealer/Sub-dealer"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/dealerSearchM"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:tag="0"
+                android:hint="Dealer Search"
+                android:background="@drawable/edit_txt_roundcorner"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="7. Owner’s Name"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/onerName"
+                android:layout_width="match_parent"
+                android:textColor="@color/grey"
+                android:background="@drawable/edit_txt_roundcorner"
+                android:padding="10dp"
+                android:maxLength="64"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="8. Owner’s Contact Number"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/oner_cnt"
+                android:layout_width="match_parent"
+                android:textColor="@color/grey"
+                android:inputType="number"
+                android:background="@drawable/edit_txt_roundcorner"
+                android:padding="10dp"
+                android:maxLength="13"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="9. Influencer Name"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/infu_name"
+                android:layout_width="match_parent"
+                android:textColor="@color/grey"
+                android:background="@drawable/edit_txt_roundcorner"
+                android:padding="10dp"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="10. Influencer Contact Number"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/infu_cont"
+                android:layout_width="match_parent"
+                android:textColor="@color/grey"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edit_txt_roundcorner"
+                android:padding="10dp"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="11. Brand Used"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/spin4"
+                android:layout_width="match_parent"
+                android:textColor="@color/grey"
+                android:layout_height="50dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="12. Lead for Captain"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/que1_1"
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/que1_2"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="13. Lead for Rustguard"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/que2_1"
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/que2_2"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="14. Gift Required"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/que3_1"
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/que3_2"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="15. Remarks"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/remarks"
+                android:textColor="@color/grey"
+                android:gravity="start"
+                android:background="@drawable/edit_txt_roundcorner"
+                android:padding="20dp"
+                android:maxLength="255"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="16. F.Exe/F.Sup"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/f_exe"
+                android:textColor="@color/grey"
+                android:gravity="start"
+                android:background="@drawable/edit_txt_roundcorner"
+                android:padding="10dp"
+                android:maxLength="32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="17. Lat+Long:   "
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/lat_log1"
+                    android:layout_width="wrap_content"
+                    android:tag="0"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/lat_log2"
+                    android:layout_width="wrap_content"
+                    android:tag="0"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="18. Photo: Max Nos"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:weightSum="3"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:tag="0"
+                    android:src="@drawable/ic_default"
+                    android:layout_height="70dp"/>
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:tag="0"
+                    android:src="@drawable/ic_default"
+                    android:layout_height="70dp"/>
+
+                <ImageView
+                    android:id="@+id/img3"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:tag="0"
+                    android:src="@drawable/ic_default"
+                    android:layout_margin="5dp"
+                    android:layout_height="70dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

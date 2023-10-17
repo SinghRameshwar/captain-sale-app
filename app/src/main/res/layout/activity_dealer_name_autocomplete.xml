@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        >
+        <view
+            class="com.aspl.steel.customWidgets.SearchEditText"
+            android:id="@+id/searchName"
+            android:layout_height="25dp"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:hint="Type Name to Search"
+            android:textSize="12sp"
+            android:paddingLeft="10dp"
+            android:drawableLeft="@drawable/magnifying_glass"
+            android:freezesText="true"
+            android:background="@drawable/rounded_edittext"
+            android:layout_margin="7dp"
+            android:layout_alignParentTop="true"
+            />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/search_empty"
+        android:layout_below="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e4e1e1"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Type to search"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textColor="@color/custom1"
+            android:gravity="center"
+            />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_empty"
+        >
+        <ListView
+            android:id="@+id/lvDealerName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="No data found"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textColor="@color/custom1"
+            />
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="350dp"
+    android:layout_gravity="center"
+    android:padding="30dp"
+    android:background="@color/white"
+    android:layout_height="400dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:src="@drawable/ic_location_edit_24dp"
+        android:tint="@color/custom1"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:layout_height="100dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Update Location Settings"
+        android:textSize="18dp"
+        android:textColor="@color/grey"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/text_message"
+        android:layout_width="wrap_content"
+        android:text="Allow us to access your location All the time so we can provide personal recommendations"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/grey"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="250dp"
+        android:layout_gravity="center"
+        android:weightSum="2"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/btn_nothanks"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_weight="1"
+            android:text="No thanks"
+            android:padding="5dp"
+            android:textColor="@color/blue"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/btn_updateSettings"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="Update Settings"
+            android:textColor="@color/blue"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

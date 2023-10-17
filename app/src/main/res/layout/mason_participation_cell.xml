@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:background="@drawable/grey_background_round_corner"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/nametitle1"
+        android:layout_width="wrap_content"
+        android:textColor="@color/custom1"
+        android:textSize="12dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:text="1. Name"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/name1"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:text=""
+        android:background="@drawable/edit_txt_roundcorner"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textColor="@color/custom1"
+        android:textSize="12dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Phone Number"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/number1"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:text=""
+        android:inputType="number"
+        android:background="@drawable/edit_txt_roundcorner"
+        android:layout_marginBottom="10dp"
+        android:maxLength="10"
+        android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+</LinearLayout>

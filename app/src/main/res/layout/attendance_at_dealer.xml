@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/my_actionbar_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_marginRight="30dp"
+                android:layout_weight="1.9"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/screenTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visit Attendance"
+                    android:textColor="@color/white"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:singleLine="true"
+                    android:layout_centerHorizontal="true" />
+                <!--style="?android:textAppearanceSmall"-->
+                <TextView
+                    android:id="@+id/right_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:layout_below="@+id/screenTitle"
+                    android:layout_centerHorizontal="true"
+                    android:text="Right Title"
+                    android:textColor="#C5C5C5"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/saveData"
+                android:layout_width="wrap_content"
+                android:text="Save"
+                android:padding="20dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="10dp"
+        android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+            android:id="@+id/dealerSearchM"
+            android:layout_width="250dp"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:tag="0"
+            android:visibility="gone"
+            android:hint="Dealer Search"
+            android:background="@drawable/edit_txt_roundcorner"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:id="@+id/dealerSearchA"
+            android:layout_width="250dp"
+            android:layout_weight="1"
+            android:text="Dealer At Loaction"
+            android:textColor="@color/grey"
+            android:layout_height="wrap_content"/>
+
+        <Switch
+            android:id="@+id/m_a_swich"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/iron"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="30dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Target Qty:     "
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/target_txt"
+            android:layout_width="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Sale qty:     "
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/target_date"
+                android:layout_width="wrap_content"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

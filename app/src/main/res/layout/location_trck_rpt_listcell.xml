@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:padding="15dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/aluminum"
+            android:text="Date: "
+            android:textSize="12dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/dateTxt"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:textColor="@color/grey"
+            android:text="DD/MM/YYYY"
+            android:textSize="14dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/aluminum"
+            android:text="     Time: "
+            android:textSize="12dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/timeTxt"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:textColor="@color/grey"
+            android:text="HH:MM:SS"
+            android:textSize="14dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/aluminum"
+            android:text="     Distance: "
+            android:textSize="12dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/distanceTxt"
+            android:layout_width="wrap_content"
+            android:textColor="@color/grey"
+            android:text="00:00 Km"
+            android:textSize="14dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/aluminum"
+                android:text="Location: "
+                android:visibility="gone"
+                android:textSize="12dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/locationTxt"
+                android:layout_width="wrap_content"
+                android:textColor="@color/grey"
+                android:text="-----------------------"
+                android:textSize="14dp"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

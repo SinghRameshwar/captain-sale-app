@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    >
+    <RelativeLayout
+        android:id="@+id/mainCard"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:background="@drawable/dark_container_bg_round_color3"
+        >
+        <TextView
+            android:id="@+id/day_of_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/white"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:id="@+id/monthYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="March 2016"
+            android:textColor="@color/white"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/day_of_month"
+            />
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QTY"
+            android:gravity="end"
+            android:layout_alignParentRight="true"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:layout_below="@id/monthYear"
+            android:layout_centerHorizontal="true"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
+</FrameLayout>

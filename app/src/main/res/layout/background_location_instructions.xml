@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:src="@drawable/ic_question_mark"
+        android:layout_gravity="right"
+        android:layout_margin="16dp"
+        android:layout_height="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:src="@drawable/ic_location_on"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Use Your Location"
+        android:textSize="18dp"
+        android:textColor="@color/grey"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="This app needs to track your location continuously in the background for recording the dealer visits and the route taken. By logging in, you are agreeing to have your location tracked in the background. In case you don't agree, please do not login."
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/grey"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:src="@drawable/image_tracking"
+        android:layout_gravity="center"
+       android:layout_marginTop="35dp"
+        android:layout_height="200dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:weightSum="2"
+        android:layout_marginTop="100dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/btn_deny"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_weight="1"
+            android:text="DENY"
+            android:padding="5dp"
+            android:textColor="@color/blue"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/btn_accept"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="ACCEPT"
+            android:textColor="@color/blue"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

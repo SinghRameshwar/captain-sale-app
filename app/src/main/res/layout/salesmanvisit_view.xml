@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/my_actionbar_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_marginRight="30dp"
+                android:layout_weight="1.9"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/screenTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dealer Visit"
+                    android:textColor="@color/white"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:singleLine="true"
+                    android:layout_centerHorizontal="true" />
+                <!--style="?android:textAppearanceSmall"-->
+                <TextView
+                    android:id="@+id/right_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:layout_below="@+id/screenTitle"
+                    android:layout_centerHorizontal="true"
+                    android:text="Right Title"
+                    android:textColor="#C5C5C5"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/saveData"
+                android:layout_width="wrap_content"
+                android:text="Save"
+                android:padding="20dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="10dp"
+        android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+            android:id="@+id/dealerSearchM"
+            android:layout_width="250dp"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:tag="0"
+            android:visibility="gone"
+            android:hint="Dealer Search"
+            android:background="@drawable/edit_txt_roundcorner"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:id="@+id/dealerSearchA"
+            android:layout_width="250dp"
+            android:layout_weight="1"
+            android:text="Dealer At Loaction"
+            android:textColor="@color/grey"
+            android:layout_height="wrap_content"/>
+
+        <Switch
+            android:id="@+id/m_a_swich"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/iron"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/que1"
+                android:layout_width="match_parent"
+                android:text="1. Whom did you meet ?"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/que_s1"
+                android:layout_width="200dp"
+                android:layout_height="40dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/que2"
+                android:layout_width="match_parent"
+                android:text="2. Is Branding OK ?"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/que2_1"
+                android:layout_width="wrap_content"
+                android:text="Yes"
+                android:layout_weight="1"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/que2_2"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/que3"
+                android:layout_width="match_parent"
+                android:text="3. What is the current stock level ?"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/queA3"
+                android:layout_width="200dp"
+                android:textColor="@color/grey"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edit_txt_roundcorner"
+                android:padding="10dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/grey"
+                android:layout_marginLeft="10dp"
+                android:text="MT"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/que4"
+                android:layout_width="match_parent"
+                android:text="4. Order expected in the next 7 days ?"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/queA4"
+                    android:layout_width="200dp"
+                    android:textColor="@color/grey"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/edit_txt_roundcorner"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp"
+                    android:text="MT"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/que5"
+                android:layout_width="match_parent"
+                android:text="5. Dealer Selling Price ?"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/queA5"
+                    android:layout_width="200dp"
+                    android:textColor="@color/grey"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/edit_txt_roundcorner"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp"
+                    android:text="Rs."
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/grey"
+                    android:layout_height="20dp"/>
+
+                <Spinner
+                    android:id="@+id/que5_spinner"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/que6"
+                android:layout_width="match_parent"
+                android:text="6. Is the dealer aware of the scheme ?"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/que6_1"
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/que6_2"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/que7"
+                android:layout_width="match_parent"
+                android:text="7. Expected payment in next 7 days(if any) ?"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/queA7"
+                    android:layout_width="200dp"
+                    android:textColor="@color/grey"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/edit_txt_roundcorner"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp"
+                    android:text="Rs."
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/que8"
+                android:layout_width="match_parent"
+                android:text="8. Mason Book Updated ?"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/que8_1"
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/que8_2"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/que9"
+                android:layout_width="match_parent"
+                android:text="9. Getting required support from technical team ?"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/que9_1"
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/que9_2"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/que10"
+                android:layout_width="match_parent"
+                android:text="10. Getting required support from survey team ?"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/que10_1"
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/que10_2"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/que11"
+                android:layout_width="match_parent"
+                android:text="11. Are you able to use dealer app ?"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/que11_1"
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/que11_2"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+         <!--Qestion Four will be There-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/que12"
+                android:layout_width="match_parent"
+                android:text="12. What other brands are available ?"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/que12_1"
+                android:layout_width="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="     (i)  TATA"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/que12_1_1"
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:layout_weight=".7"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/que12_1_2"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:layout_weight=".7"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/queA12_1"
+                    android:layout_width="70dp"
+                    android:layout_weight="1.3"
+                    android:hint="Stock"
+                    android:textColor="@color/grey"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/edit_txt_roundcorner"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="right"
+                    android:text="MT"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/que12_2"
+                android:layout_width="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="     (ii)  SRMB"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/que12_2_1"
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:layout_weight=".7"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/que12_2_2"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:layout_weight=".7"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/queA12_2"
+                    android:layout_width="70dp"
+                    android:layout_weight="1.3"
+                    android:hint="Stock"
+                    android:textColor="@color/grey"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/edit_txt_roundcorner"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="right"
+                    android:text="MT"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/que12_3"
+                android:layout_width="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="     (iii)  Shyam"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/que12_3_1"
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:layout_weight=".7"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/que12_3_2"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:layout_weight=".7"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/queA12_3"
+                    android:layout_width="70dp"
+                    android:layout_weight="1.3"
+                    android:hint="Stock"
+                    android:textColor="@color/grey"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/edit_txt_roundcorner"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="right"
+                    android:text="MT"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/que12_4"
+                android:layout_width="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="     (iv)  Elegant"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/que12_4_1"
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:layout_weight=".7"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/que12_4_2"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:layout_weight=".7"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/queA12_4"
+                    android:layout_width="70dp"
+                    android:layout_weight="1.3"
+                    android:hint="Stock"
+                    android:textColor="@color/grey"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/edit_txt_roundcorner"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="right"
+                    android:text="MT"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/que12_5"
+                android:layout_width="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="     (v)  JSW"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/que12_5_1"
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:layout_weight=".7"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/que12_5_2"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:layout_weight=".7"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/queA12_5"
+                    android:layout_width="70dp"
+                    android:layout_weight="1.3"
+                    android:hint="Stock"
+                    android:textColor="@color/grey"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/edit_txt_roundcorner"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginLeft="5dp"
+                    android:text="MT"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/que12_6"
+                android:layout_width="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="     (vi)  Panther"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/que12_6_1"
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:layout_weight=".7"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/que12_6_2"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:layout_weight=".7"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/queA12_6"
+                    android:layout_width="70dp"
+                    android:layout_weight="1.3"
+                    android:hint="Stock"
+                    android:textColor="@color/grey"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/edit_txt_roundcorner"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginLeft="5dp"
+                    android:text="MT"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/que12_7"
+                android:layout_width="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="     (vii)  Others"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/que12_7_1"
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:layout_weight=".7"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/que12_7_2"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:layout_weight=".7"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/queA12_7"
+                    android:layout_width="70dp"
+                    android:layout_weight="1.3"
+                    android:hint="Stock"
+                    android:textColor="@color/grey"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/edit_txt_roundcorner"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginLeft="5dp"
+                    android:text="MT"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/que13"
+                android:layout_width="match_parent"
+                android:text="13. Is the dealer lifting other Captain Products ?"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/que13_1"
+                    android:layout_width="wrap_content"
+                    android:text="Yes"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:id="@+id/que13_2"
+                    android:layout_width="wrap_content"
+                    android:text="No"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/que14"
+                android:layout_width="wrap_content"
+                android:text="14. Remarks"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/queA14"
+                android:textColor="@color/grey"
+                android:gravity="start"
+                android:background="@drawable/edit_txt_roundcorner"
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/que15"
+                android:layout_width="wrap_content"
+                android:text="15. Photo : Max 2 nos"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/queA15_1"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:tag="0"
+                    android:src="@drawable/ic_default"
+                    android:layout_height="100dp"/>
+
+                <ImageView
+                    android:id="@+id/queA15_2"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:tag="0"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_default"
+                    android:layout_height="100dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/iron"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/que16"
+                android:layout_width="wrap_content"
+                android:text="16. Next Visit Date "
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/queA16"
+                    android:layout_width="wrap_content"
+                    android:text="MM/DD/YY"
+                    android:tag="0"
+                    android:padding="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/blue"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

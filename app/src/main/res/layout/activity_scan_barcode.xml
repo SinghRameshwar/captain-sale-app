@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:background="#FFFFFF" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/left"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="#FFFFFF" />
+
+            <LinearLayout
+                android:id="@+id/scannerLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/left"
+                android:layout_toLeftOf="@id/right"
+                android:layout_toRightOf="@id/left"
+                android:layout_toStartOf="@+id/right"
+                android:background="@drawable/ic_viewfinder"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/scannerBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#0070C3" />
+
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/right"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="#FFFFFF" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:background="#FFFFFF" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/dlr_dtlpopup"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Dealer/Sub-dealer Name "
+                android:textColor="@color/grey"
+                android:textSize="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txtBarcodeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text=""
+                android:hint="Dealer Name"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/dler_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text=""
+                android:visibility="gone"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Date"
+                android:textColor="@color/grey"
+                android:textSize="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/scnDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text=""
+                android:hint="Current Date"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Current Location"
+                android:textColor="@color/grey"
+                android:textSize="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/loc_adrText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text=""
+                android:hint="Location Address"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/mis_lay"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/locnMisMas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text=""
+                    android:textColor="@color/red"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Dealer/Sub-dealer Location"
+                    android:textColor="@color/grey"
+                    android:textSize="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/dlr_subdlr_loc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text=""
+                    android:textColor="@color/grey"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:layout_marginTop="20dp"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/popuo_Cancelbtn"
+                    android:layout_width="100dp"
+                    android:textSize="14dp"
+                    android:text="Cancel"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_height="51dp" />
+
+                <TextView
+                    android:id="@+id/popuo_donebtn"
+                    android:layout_width="100dp"
+                    android:textSize="14dp"
+                    android:text="Done"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_height="51dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

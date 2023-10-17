@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/my_actionbar_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_weight="1.9"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/screenTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:singleLine="true"
+                    android:text="BDE Daily Activity Report"
+                    android:textColor="@color/white" />
+                <!--style="?android:textAppearanceSmall"-->
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/page1"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="visible"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Visit Type"
+            android:textColor="@color/custom1"
+            android:textSize="12dp" />
+
+        <Spinner
+            android:id="@+id/v_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/screenTitle"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/base"
+            android:layout_marginBottom="10dp"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Name"
+            android:textColor="@color/custom1"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/v_name"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:text=""
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit_txt_roundcorner"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/base"
+            android:layout_marginBottom="10dp"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Phone Number"
+            android:textColor="@color/custom1"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/v_number"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:text=""
+            android:layout_marginTop="5dp"
+            android:inputType="phone"
+            android:background="@drawable/edit_txt_roundcorner"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/visit_start"
+            android:layout_width="150dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_marginTop="50dp"
+            android:padding="10dp"
+            android:text="Visit Start"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/page2"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Purpose of Visit"
+            android:textColor="@color/custom1"
+            android:textSize="12dp" />
+
+        <Spinner
+            android:id="@+id/p_o_visit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/screenTitle"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/base"
+            android:layout_marginBottom="10dp"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Sale Converted ?"
+            android:textColor="@color/custom1"
+            android:textSize="12dp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:id="@+id/radioGroup"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/sale_convert_rbtn"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:checked="true"
+                android:text="Yes" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:text="No" />
+        </RadioGroup>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/base"
+            android:layout_marginBottom="10dp"
+            android:layout_height="1dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="If Yes then Conversion Details"
+            android:textColor="@color/custom1"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/c_details"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:text=""
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit_txt_roundcorner"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/base"
+            android:layout_marginBottom="10dp"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Remarks"
+            android:textColor="@color/custom1"
+            android:textSize="12dp" />
+
+
+        <EditText
+            android:id="@+id/remark_txt"
+            android:textColor="@color/grey"
+            android:gravity="start"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit_txt_roundcorner"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/base"
+            android:layout_marginBottom="10dp"
+            android:layout_height="1dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Next Visit Date"
+            android:textColor="@color/custom1"
+            android:textSize="12dp" />
+
+
+        <TextView
+            android:id="@+id/date_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="DD-MM-YYYY"
+            android:tag="0"
+            android:textColor="@color/blue"
+            android:textSize="15dp" />
+
+
+        <TextView
+            android:id="@+id/end_visit_save"
+            android:layout_width="240dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_marginTop="50dp"
+            android:padding="10dp"
+            android:text="End Visit and Save Report"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+</LinearLayout>

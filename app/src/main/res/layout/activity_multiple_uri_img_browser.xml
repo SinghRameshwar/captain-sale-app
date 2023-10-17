@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/my_actionbar_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="5dp"
+        android:background="@color/primary"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        >
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:background="@color/primary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/screenTitle"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textStyle="normal"
+                android:paddingLeft="0dp"
+                android:paddingStart="0dp"
+                android:paddingBottom="5dp"
+                android:singleLine="true"
+                android:gravity="center"
+                android:ellipsize="end"
+                />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_below="@+id/my_actionbar_toolbar"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.viewpager.widget.ViewPager>
+</RelativeLayout>

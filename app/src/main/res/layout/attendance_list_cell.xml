@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:padding="15dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/aluminum"
+            android:text="Date"
+            android:textSize="12dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/dateTxt"
+            android:layout_width="wrap_content"
+            android:textColor="@color/grey"
+            android:text="DD/MM/YYYY"
+            android:textSize="14dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/aluminum"
+            android:text="In Time"
+            android:textSize="12dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/inTimeTxt"
+            android:layout_width="wrap_content"
+            android:textColor="@color/grey"
+            android:text="00:00:00"
+            android:textSize="14dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/aluminum"
+            android:text="Out Time"
+            android:textSize="12dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/outTimeTxt"
+            android:layout_width="wrap_content"
+            android:textColor="@color/grey"
+            android:text="00:00:00"
+            android:textSize="14dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/my_actionbar_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:elevation="4dp">
+
+        <RelativeLayout
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/screenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Lead Details"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                android:textColor="@color/white"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:singleLine="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/save_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Update"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/aluminum"
+                    android:text="Lead Number: "
+                    android:textSize="12dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/lead_num"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/grey"
+                    android:text=".............."
+                    android:textSize="14dp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/aluminum"
+                    android:text="Visit Type: "
+                    android:textSize="12dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/lead_type"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/grey"
+                    android:text="....."
+                    android:textSize="14dp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="@color/aluminum"
+        android:text="Dealer/Sub-dealer"
+        android:layout_marginTop="5dp"
+        android:textSize="12dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/d_sub_dlr_txt"
+        android:layout_width="match_parent"
+        android:textColor="@color/grey"
+        android:text=".............."
+        android:textSize="14dp"
+        android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="@color/aluminum"
+            android:layout_weight="1"
+            android:text="Influencer Name"
+            android:textSize="12dp"
+            android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/aluminum"
+                android:text="Contact No."
+                android:textSize="12dp"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/infu_name_txt"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:textColor="@color/grey"
+                android:text=".................."
+                android:textSize="14dp"
+                android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/infu_cont_txt"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:textColor="@color/grey"
+            android:gravity="right"
+            android:text=".............................."
+            android:textSize="14dp"
+            android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textColor="@color/aluminum"
+                    android:layout_weight="1"
+                    android:text="Owner's Name"
+                    android:textSize="12dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/aluminum"
+                    android:text="Contact No."
+                    android:textSize="12dp"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/oner_name_txt"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:text="..............."
+                    android:textSize="14dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/oner_cont_txt"
+                    android:layout_width="match_parent"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:textColor="@color/grey"
+                    android:text=".............................."
+                    android:textSize="14dp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/aluminum"
+            android:text="Brand Used: "
+            android:textSize="12dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/brnd_usd_txt"
+            android:layout_width="wrap_content"
+            android:textColor="@color/grey"
+            android:text="............................"
+            android:textSize="14dp"
+            android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/aluminum"
+                    android:text="Lead for Captain: "
+                    android:textSize="12dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/led_fr_caotn"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/grey"
+                    android:text="....."
+                    android:textSize="14dp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/aluminum"
+                android:text="Lead for Rustguard: "
+                android:textSize="12dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/led_fr_rstgrd"
+                android:layout_width="wrap_content"
+                android:textColor="@color/grey"
+                android:text="............."
+                android:textSize="14dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/aluminum"
+                    android:text="Date: "
+                    android:textSize="12dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/date_txt"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/grey"
+                    android:text="............."
+                    android:textSize="14dp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/aluminum"
+                android:text="Gift Required: "
+                android:textSize="12dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/gift_required"
+                android:layout_width="wrap_content"
+                android:textColor="@color/grey"
+                android:text="............."
+                android:textSize="14dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/aluminum"
+                android:text="F.Exe/F.Sup: "
+                android:textSize="12dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/f_exe"
+                android:layout_width="wrap_content"
+                android:textColor="@color/grey"
+                android:text="............."
+                android:textSize="14dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="@color/aluminum"
+            android:text="Site Details"
+            android:layout_marginTop="5dp"
+            android:textSize="12dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/site_dtls_txt"
+            android:layout_width="match_parent"
+            android:textColor="@color/grey"
+            android:text="................"
+            android:textSize="14dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="@color/aluminum"
+            android:text="Site Address"
+            android:layout_marginTop="5dp"
+            android:textSize="12dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/site_adrs_txt"
+            android:layout_width="match_parent"
+            android:textColor="@color/grey"
+            android:text=".................."
+            android:textSize="14dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="@color/aluminum"
+            android:text="Lead Creator's Remark"
+            android:layout_marginTop="5dp"
+            android:textSize="12dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/lead_f_remark"
+            android:layout_width="match_parent"
+            android:textColor="@color/grey"
+            android:text=".................."
+            android:textSize="14dp"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="@color/aluminum"
+            android:text="Remark:-"
+            android:textSize="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/remark_edt"
+                android:textColor="@color/grey"
+                android:gravity="start"
+                android:background="@drawable/edit_txt_roundcorner"
+                android:padding="20dp"
+                android:maxLength="101"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/aluminum"
+                android:text="Status"
+                android:layout_marginTop="5dp"
+                android:textSize="12dp"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/spin1"
+                android:layout_width="match_parent"
+                android:textColor="@color/grey"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/aluminum"
+                android:text="Convert From"
+                android:layout_marginTop="5dp"
+                android:textSize="12dp"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/spin2"
+                android:layout_width="match_parent"
+                android:textColor="@color/grey"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/aluminum"
+                android:text="Convert Qty"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="12dp"
+                android:layout_height="wrap_content"/>
+
+
+            <EditText
+                android:id="@+id/convrt_qty"
+                android:layout_width="match_parent"
+                android:textColor="@color/grey"
+                android:inputType="number"
+                android:background="@drawable/edit_txt_roundcorner"
+                android:padding="10dp"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:text="History"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="16dp"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:id="@+id/histry_lay"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"/>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
